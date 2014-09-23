@@ -1,0 +1,7 @@
+.idea
+vendor
+clover.xml
+clover
+/.project
+doc/**
+reports/**

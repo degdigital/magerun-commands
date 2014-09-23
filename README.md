@@ -28,6 +28,6 @@ Commands
 
 This command will export a specific list of table(s).
 
-    $ n98-magerun db:export --tables="catalog_product_entity"
+    $ n98-magerun db:export --tables="catalog_product_entity" --where-limit=100
 
 It's intended to be used to export a partial dataset(catalog, customers, orders) for automated testing.

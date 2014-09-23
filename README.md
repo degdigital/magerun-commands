@@ -4,7 +4,7 @@ Magerun Custom Commands
 Some additional commands for the excellent N98-MageRun Magento command-line tool.
 
 The purpose of this project is just to have an easy way to deploy new, custom
-commands that I need to use for Magento development and automated testing.
+commands that we need for Magento development and automated testing.
 
 Installation
 ------------

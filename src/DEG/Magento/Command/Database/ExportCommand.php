@@ -29,6 +29,7 @@ class ExportCommand extends DumpCommand
             ->addOption('force', 'f', InputOption::VALUE_NONE, 'Do not prompt if all options are defined')
             ->addOption('human-readable', null, InputOption::VALUE_NONE, 'Use a single insert with column names per row. Useful to track database differences. Use db:import --optimize for speeding up the import.')
             ->addOption('add-routines', null, InputOption::VALUE_NONE, 'Include stored routines in dump (procedures & functions)')
+            ->addOption('data-only', null, InputOption::VALUE_NONE, 'Dump only the data. Do not dump the table information.')
             ->setDescription('Dumps a partial database with mysqldump cli client according to informations from local.xml');
 
         $help = <<<HELP
@@ -90,6 +91,10 @@ HELP;
 
         if ($input->getOption('add-routines')) {
             $dumpOptions .= '--routines ';
+        }
+
+        if ($input->getOption('data-only')) {
+            $dumpOptions .= '--no-create-info ';
         }
 
         if ($input->getOption('where-limit')) {

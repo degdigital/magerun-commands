@@ -113,7 +113,7 @@ HELP;
             if (!$input->getOption('stdout') && !$input->getOption('only-command')
                 && !$input->getOption('print-only-filename')
             ) {
-                $output->writeln('<comment>No-data export for: <info>' . implode(' ', $includeTables)
+                $output->writeln('<comment>Exporting data and structure for: <info>' . implode(' ', $includeTables)
                     . '</info></comment>'
                 );
             }
